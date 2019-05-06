@@ -1,1 +1,1 @@
-[spandora.github.io](https://supinepandora43.github.io/spandora/)
+[https://supinepandora43.github.io/](https://supinepandora43.github.io/ "My Site")
