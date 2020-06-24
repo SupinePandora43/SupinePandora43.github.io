@@ -3,3 +3,5 @@ out
 obj
 yarn.lock
 yarn-error.log
+.vs
+.babelrc
