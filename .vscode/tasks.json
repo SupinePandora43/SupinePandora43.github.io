@@ -1,0 +1,33 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Browser-Sync",
+            "type": "shell",
+			"command": "browser-sync",
+			"args": [
+				"start",
+				"--server",
+				"--files",
+				"\"*\""
+			]
+		},
+		{
+			"label": "stylus - watch",
+			"type": "shell",
+			"command":"stylus",
+			"args": [
+				".",
+				"-w"
+			]
+		},
+		{
+			"label": "stylus - build",
+			"type": "shell",
+			"command":"stylus",
+			"args": ["."]
+		}
+    ]
+}
