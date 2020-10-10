@@ -63,12 +63,15 @@
     <Folder Include="routes\" />
     <Folder Include="src\" />
     <Folder Include="src\client\" />
+    <Folder Include="src\client\subpages\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="src\client\Main.tsx">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\client\subpages\Me.tsx" />
+    <TypeScriptCompile Include="src\client\subpages\SpeechTest.tsx" />
     <TypeScriptCompile Include="src\index.ts" />
     <TypeScriptCompile Include="src\registerServiceWorker.ts" />
   </ItemGroup>

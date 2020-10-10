@@ -16,12 +16,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_router_dom_1 = require("react-router-dom");
 var react_loadable_1 = require("react-loadable");
+var SpeechTest_1 = require("./subpages/SpeechTest");
 function loads() {
     return (React.createElement("div", null, "loader"));
 }
 var LoadableBar = react_loadable_1.default({
     loader: function () { return Promise.resolve().then(function () { return require('./subpages/Me'); }); },
     loading: loads,
+});
+var LoadingSpeechTest = react_loadable_1.default({
+    loader: function () { return Promise.resolve().then(function () { return require('./subpages/SpeechTest'); }); },
+    loading: loads
 });
 var Main = /** @class */ (function (_super) {
     __extends(Main, _super);
@@ -31,6 +36,7 @@ var Main = /** @class */ (function (_super) {
     Main.prototype.render = function () {
         return (React.createElement("div", { className: "Main", id: "Main" },
             React.createElement("div", null, "1"),
+            React.createElement(SpeechTest_1.default, null),
             React.createElement(react_router_dom_1.BrowserRouter, null,
                 React.createElement("div", null,
                     React.createElement("nav", null,
@@ -40,10 +46,14 @@ var Main = /** @class */ (function (_super) {
                             React.createElement("li", null,
                                 React.createElement(react_router_dom_1.Link, { to: "/me" }, "About")),
                             React.createElement("li", null,
-                                React.createElement(react_router_dom_1.Link, { to: "/users" }, "Users")))),
+                                React.createElement(react_router_dom_1.Link, { to: "/users" }, "Users")),
+                            React.createElement("li", null,
+                                React.createElement(react_router_dom_1.Link, { to: "/speechtest" }, "SpeechTest")))),
                     React.createElement(react_router_dom_1.Switch, null,
                         React.createElement(react_router_dom_1.Route, { path: "/me" },
-                            React.createElement(LoadableBar, null)))))));
+                            React.createElement(LoadableBar, null)),
+                        React.createElement(react_router_dom_1.Route, { path: "/speechtest" },
+                            React.createElement(LoadingSpeechTest, null)))))));
     };
     return Main;
 }(React.Component));
